@@ -12,7 +12,8 @@ class Parsertext(HTMLParser.HTMLParser):
                 #Create instance of HTML parser
 lParser = Parsertext()
 
-thisurl = "http://www-rohan.sdsu.edu/~gawron/index.html"
+#thisurl = "http://www-rohan.sdsu.edu/~gawron/index.html"
+thisurl = "http://mangastream.com/"
 #Feed HTML file into parser
 lParser.feed(urllib.urlopen(thisurl).read())
 lParser.close()
