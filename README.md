@@ -1,19 +1,53 @@
 # MangaNotifier
 This is a widget for manga fans. Instead of RSS notifiers from different sites, this is a widget that polls from multiple sites.
 
-Currently, we are trying to use Andriod visual studio to build this for android users.
+Currently, we are trying to use Android visual studio to build this for android users.
 
-We are using Python for web crawling.
+We are using Python for the back end.
+
+#Environment
+
+We are using [Oracle VM VirtualBox](https://www.virtualbox.org) to run our virtual machines.
+
+Development is being done on both [Ubuntu](https://www.ubuntu.com) and [Fedora](https://getfedora.org)
+
+We are using the [Atom](https://atom.io/) text editor.
 
 #Installation
 
-I use Oracle VM VirtualBox and use ubuntu for the environment.
-https://www.virtualbox.org/
-http://www.ubuntu.com/
+##Prerequisites
+* Python 3
+* Pip
+* Git
 
-We then used Atom within the ubuntu environment.
-Download atom-amd64.deb from the Atom releases page.
-Run sudo dpkg --install atom-amd64.deb on the downloaded package.
-Launch Atom using the installed atom command.
+##Setup
 
-Jordan Added setup script, so if you run it, it should good.
+1. Install virtualenv
+
+    ```sudo pip install virtualenv```
+
+2. Clone the repository
+
+    ```git clone https://github.com/roberthluo/MangaNotifier.git```
+
+3. Change to the project directory
+
+    ```cd MangaNotifier```
+
+4. Setup a new virtual environment
+
+    ```virtualenv venv```
+
+5. Activate the virtual environment
+
+    ```source venv/bin/activate```
+
+6. Install dependencies
+
+    ```pip install -r setup/requirements.txt```
+
+##Finishing up
+
+When done working, you can exit the virtual environment using:
+
+```deactivate```
