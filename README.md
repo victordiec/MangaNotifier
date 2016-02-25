@@ -50,4 +50,4 @@ We are using the [Atom](https://atom.io/) text editor.
 
 When done working, you can exit the virtual environment using:
 
-```deactivate```
+    deactivate
