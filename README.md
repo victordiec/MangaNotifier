@@ -18,6 +18,7 @@ We are using the [Atom](https://atom.io/) text editor.
 ##Prerequisites
 * Python 3
 * Pip
+* MongoDB
 * Git
 
 ##Setup
