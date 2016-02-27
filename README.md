@@ -57,25 +57,34 @@ When done working, you can exit the virtual environment using:
 ##Use MongoDB (Needs venv to run)
 1. Install MongoDB(I used ubuntu, choose the steps for the machine you are using)
 
-https://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/
+    [link](https://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/)
 
 2. Activate the mongo environment
-
+    
     ```mongo```
+
+
+3. Change to the project directory
+
+    ```cd MangaNotifier```
+
 
 3. Go into manganotifier db
 
     ```use manganotififer```
 
 4. List records in manganotifier
-
+    
     ```db.manga.find()```
 
 5. When done working, you can exit the db using:
-
+    
     ```^c```
-6. Go back to the Manganotifier system
+
+6. Go back to the Manganotifier system and run command
 
     ```python HTMLParser.py```
+
+
 
 
