@@ -47,8 +47,31 @@ We are using the [Atom](https://atom.io/) text editor.
 
     ```pip install -r setup/requirements.txt```
 
+
 ##Finishing up
 
 When done working, you can exit the virtual environment using:
 
     deactivate
+
+##Use MongoDB (Needs venv to run)
+1. Install MongoDB(I used ubuntu, choose the steps for the machine you are using)
+
+https://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/
+
+2. Activate the mongo environment
+
+    ```mongo```
+
+3. Go into manganotifier db
+
+    ```use manganotififer```
+
+4. List records in manganotifier
+
+    ```db.manga.find()```
+
+5. When done working, you can exit the db using:
+
+    ```^c```
+
