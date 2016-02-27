@@ -74,4 +74,8 @@ https://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/
 5. When done working, you can exit the db using:
 
     ```^c```
+6. Go back to the Manganotifier system
+
+    ```python HTMLParser.py```
+
 
