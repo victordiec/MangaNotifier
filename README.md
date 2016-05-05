@@ -52,30 +52,42 @@ We are using the [Atom](https://atom.io/) text editor.
 
 When done working, you can exit the virtual environment using:
 
-    deactivate
+    ```deactivate```
 
 ##Use MongoDB (Needs venv to run)
+
 1. Install MongoDB(I used ubuntu, choose the steps for the machine you are using)
 
-https://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/
+    [link](https://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/)
 
 2. Activate the mongo environment
-
-    ```mongo```
+    ```
+    mongo
+    ```
 
 3. Go into manganotifier db
-
-    ```use manganotififer```
+    ```
+    use manganotififer
+    ```
 
 4. List records in manganotifier
 
-    ```db.manga.find()```
+    ```
+    db.manga.find()
+    ```
+5. When done working, you can exit db using:
+    ```
+    ^c
+    ```
 
-5. When done working, you can exit the db using:
+6. Go back to Manganotifier folder
 
-    ```^c```
-6. Go back to the Manganotifier system
+    ```
+    python HTMLParser.py
+    ```
 
-    ```python HTMLParser.py```
+
+
+
 
 
