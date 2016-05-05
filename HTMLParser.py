@@ -34,6 +34,8 @@ Methods should return an array containing dictionaries:
 """
 
 class HTMLParser:
+    def __init__(self):
+        self.list_size = 0
 
     def parse_mangastream(self):
         html = requests.get('http://mangastream.com/manga').text
@@ -43,6 +45,7 @@ class HTMLParser:
 
         manga_list = []
 
+
         for tr in tr_list[1:]:
             td_list = tr.find_all('td')
             manga = td_list[0].find('strong').find('a').get_text()
@@ -50,6 +53,7 @@ class HTMLParser:
             link = td_list[1].find('a', class_ = 'chapter-link')['href']
             manga_list.append({'name': manga, 'release': release, 'link': link})
 
+        self.list_size = len(manga_list)
         return manga_list
 
 
