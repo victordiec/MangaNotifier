@@ -19,13 +19,23 @@ class MangaDAO:
     def update_manga(self, manga):
         result = self.db.manga.update_many(
             {'name': manga['name']},
-            {
-                '$set': {
+            {'$set': {
                     'release': manga['release'],
                     'link': manga['link']
                 }
             }
         )
+
+    def check_if_exist(self, manga):
+
+        exist = self.db.manga.find_one({"name" : manga['name'],
+            "link" : manga['link'], "release" : manga['release']})
+
+        if exist == None:
+            return False
+        else:
+            return True
+
 
 if __name__ == '__main__':
     manga_dao = MangaDAO()
@@ -34,11 +44,16 @@ if __name__ == '__main__':
     #manga_dao.add_manga({'name': 'The Heroic Legend of Arslan', 'release': '10 - A Captured Queen', 'link': 'http://readms.com/r/arslan/10/2417/1'})
     #loop to add all records to db
     html_parser = HTMLParser()
-
-    print(html_parser.parse_mangastream())
+    mangaelem = {"name" : 'Vinland Saga',
+        "link" :'http://readms.com/r/vinland_saga/127/3377/1',
+         "release" : '127 - The Baltic Sea War 3'}
+    mangaelem1 = {"name" : 'Vinland Saga',
+        "link" :'http://readms.com/r/vinland_saga/127/3377/1',
+        "release" : '1272 - The Baltic Sea War 3'}
+    #print(html_parser.parse_mangastream())
     print(html_parser.list_size)
-
-
+    print(manga_dao.check_if_exist(mangaelem))
+    print(manga_dao.check_if_exist(mangaelem1))
 
     line = html_parser.parse_mangastream()
     #m = re.search(, line)
