@@ -13,6 +13,8 @@ Development is being done on both [Ubuntu](https://www.ubuntu.com) and [Fedora](
 
 We are using the [Atom](https://atom.io/) text editor.
 
+We are using eve for our REST API.
+
 #Installation
 
 ##Prerequisites
@@ -20,6 +22,7 @@ We are using the [Atom](https://atom.io/) text editor.
 * Pip
 * MongoDB
 * Git
+* Eve
 
 ##Setup
 
@@ -52,7 +55,9 @@ We are using the [Atom](https://atom.io/) text editor.
 
 When done working, you can exit the virtual environment using:
 
-    ```deactivate```
+    
+    deactivate
+    
 
 ##Use MongoDB (Needs venv to run)
 
@@ -84,9 +89,16 @@ When done working, you can exit the virtual environment using:
 
     ```
     python HTMLParser.py
+    
     ```
 
+##Use Eve
 
+1. It quite simple, but you may be prompted to upgrade pip 
+
+    ```
+    sudo pip install eve 
+    ```
 
 
 
