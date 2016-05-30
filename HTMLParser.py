@@ -127,17 +127,19 @@ class HTMLParser:
 
         match = re.match('Last\s+Page\s+\((\d+)\)', last_page)
 
+        print(chapter["link"])
+        link_hdr = (re.match("(http:\/\/(mangastream|readms).com\/r\/[\w\d\_]+\/\d+\.?\d+\/\d+\/)",chapter["link"])).group(1)
+        print(link_hdr)
+
         if match:
             last_page = match.group(1)
             print("This is the last page", last_page)
 
             for i in range(1,int(last_page)+1):
-                print(i)
+                print(link_hdr+str(i))
 
         else:
             print("Couldn't find the last page")
-
-
 
 
 
